@@ -7,7 +7,7 @@ load_dotenv()
 
 from langchain_community.document_loaders import PyPDFLoader
 
-PDF_PATH = r"D:\LLM\AI Agent\project\python-for-data-analysis.pdf"
+PDF_PATH = os.path.join(os.path.dirname(__file__), "python-for-data-analysis.pdf")
 
 if not os.path.exists(PDF_PATH):
     raise FileNotFoundError(f"الملف مش موجود: {PDF_PATH}")
